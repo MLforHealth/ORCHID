@@ -1,0 +1,48 @@
+---
+title: "ORCHID Process Variants"
+output: html_notebook
+---
+
+The event log is created from the data set using the preprocessing Python notebook. This event log is loaded into the BupaR library.
+
+```{r}
+# We need to load the BupaR library for process mining
+library(bupaverse)
+log <- read.csv("event_log.csv")
+# We create an artificial complete timestamp that is the same as the start timestamp to make it compatible with the import
+log$Timestamp2 <- log$Timestamp
+log <- log %>%
+  
+  # First, we need to rename columns such that the library understands which information is contained in them
+  dplyr::rename(start = Timestamp, 
+           complete = Timestamp2) %>%
+  
+  # We need to convert the timestamp columns to actual timestamps
+  convert_timestamps(columns = c("start","complete"), format = ymd_hms) %>%
+  
+  # We tell the library how to interpret the other columns as cases, activities, timestamps, and resources. The specific type of event log is called "activity log" for this library
+  activitylog(case_id = "PatientID",
+                activity_id = "Activity",
+                timestamps = c("start","complete"),
+                resource_id = "OPO") 
+  
+```
+
+## Variant Analysis
+
+A *variant* is a sequence of activities. Two patients belong to the same variant if they exhibit the same sequence of activities. We can visualize the distribution over variants and store it.
+
+```{r}
+library(ggplot2)
+# Plot again (this time it will be saved with the specified height)
+var_plot <- log %>%
+    trace_explorer(n_traces = 4, label_size =4)
+
+ggsave("variants.pdf", plot = var_plot, width = 7, height = 3)
+
+var_plot <- log %>%
+    trace_explorer(n_traces = 25, label_size =4)
+
+ggsave("variants_all.pdf", plot = var_plot, width = 7, height = 18)
+
+```
