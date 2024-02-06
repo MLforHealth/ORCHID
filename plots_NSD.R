@@ -18,8 +18,8 @@ library(table1)
 
 ## Import Data
 
-data <- read.csv('../opd.csv', stringsAsFactors = FALSE)
-deaths <- read.csv('../calc_deaths.csv', stringsAsFactors = FALSE)
+data <- read.csv('../Data/referrals.csv', stringsAsFactors = FALSE)
+deaths <- read.csv('../Data/calc_deaths.csv', stringsAsFactors = FALSE)
 
 data %>% group_by(OPO) %>% summarise(n=n())
 
@@ -36,13 +36,15 @@ data <- data %>% mutate_at(names(data)[grepl("time_*", names(data))], date_conve
 
 ## Compute overall Performance Metrics for each OPO
 
-performance <- data %>% select(OPO, Referral_Year, PatientID, approached, authorized, procured, transplanted) %>% 
+data$cms_tx <- (data$transplanted | data$outcome_pancreas=='Recovered for Research')
+performance <- data %>% select(OPO, Referral_Year, PatientID, approached, authorized, procured, transplanted, cms_tx) %>% 
                 group_by(OPO, Referral_Year) %>%
                   summarise(referrals = n(), 
                             approaches = sum(approached), 
                             authorizations = sum(authorized), 
                             procurements = sum(procured), 
-                            transplants = sum(transplanted)) %>% rename(Year=Referral_Year)
+                            transplants = sum(transplanted), 
+                            cms_tx = sum(cms_tx)) %>% rename(Year=Referral_Year)
 
 ### Join deaths data to summarized OPO performance
 performance <- performance %>% left_join(deaths %>% select(OPO, Year, calc_deaths), c("OPO","Year"))
@@ -50,41 +52,38 @@ performance <- performance %>% mutate(`Approach Rate` = approaches / referrals,
                                       `Authorization Rate` = authorizations / approaches, 
                                       `Authorized Procurement Rate` = procurements / authorizations,
                                       `Procured Transplant Rate` = transplants / procurements, 
-                                      `Donation Rate` = transplants / calc_deaths) %>% 
+                                      `Donation Rate` = cms_tx / calc_deaths) %>% 
                 pivot_longer(cols = ends_with("Rate")) %>% select(OPO, Year, name, value)
 
 ## Compute Performance Metrics by Race
 
-race_performance <- data %>% select(OPO, Referral_Year, Race, PatientID, approached, authorized, procured, transplanted) %>% 
-  group_by(OPO, Race, Referral_Year) %>%
-  summarise(referrals = n(), 
-            approaches = sum(approached), 
-            authorizations = sum(authorized), 
-            procurements = sum(procured), 
-            transplants = sum(transplanted)) %>% rename(Year=Referral_Year) %>% 
-  mutate(`Approach Rate` = approaches / referrals, 
-                                      `Authorization Rate` = authorizations / approaches, 
-                                      `Authorized Procurement Rate` = procurements / authorizations,
-                                      `Procured Transplant Rate` = transplants / procurements) %>% 
-  pivot_longer(cols = ends_with("Rate")) %>% select(OPO, Year, name, value)
+race_auth <- data %>% select(Referral_Year, Race, approached, authorized) %>% 
+  group_by(Referral_Year, Race) %>%
+  summarise(approaches = sum(approached), 
+            authorizations = sum(authorized)) %>% 
+    rename(Year=Referral_Year) %>% 
+      mutate(`Authorization Rate` = authorizations / approaches)
 
 # Figure 2
 ## Figure 2a: waterfall
 
-wf <- data %>% group_by(Referral_Year) %>%
+wf <- data %>% #group_by(Referral_Year) %>%
   summarise(referrals = n(), 
             approaches = sum(approached), 
             authorizations = sum(authorized), 
             procurements = sum(procured), 
-            transplants = sum(transplanted)) %>% rename(Year=Referral_Year) %>% 
-  filter(Year==2020) %>% ungroup() %>%
+            transplants = sum(transplanted)) %>% 
+  # rename(Year=Referral_Year) %>% filter(Year==2020) %>% 
+  ungroup() %>%
   mutate(Referred=referrals, 
-         `Evaluated, not Approached` = approaches - referrals, 
+         `Evaluated, but Ruled Out` = approaches - referrals, 
          `Approached, not Authorized`= authorizations - approaches, 
          `Authorized, not Procured` = procurements - authorizations, 
          `Procured, not Transplanted` = transplants -  procurements) %>% 
-  select(-referrals, -approaches, -authorizations, -procurements, -transplants,-Year) %>% 
+  # select(-referrals, -approaches, -authorizations, -procurements, -transplants,-Year) %>% 
+  select(-referrals, -approaches, -authorizations, -procurements, -transplants) %>%
   pivot_longer(cols=everything()) %>% mutate(name = str_wrap(name, width = 10))
+
 waterfall(wf, calc_total = TRUE, rect_width = 0.6, draw_lines = TRUE, linetype = 2,
           fill_by_sign = FALSE, 
           fill_colours = c("#D5E6F2", "#FF9999", "#FF9999", "#FF9999", "#FF9999"),
@@ -96,31 +95,32 @@ waterfall(wf, calc_total = TRUE, rect_width = 0.6, draw_lines = TRUE, linetype =
           draw_axis.x = "front", rect_text_size=1.6) +
   theme_classic() + xlab("") + 
   ylab("Count") +
-  scale_y_continuous(expand = c(0, 0), breaks=seq(0,30000, 5000), limits = c(0,26000), 
-                     labels = scales::comma) + 
+  scale_y_continuous(expand = c(0, 0), breaks=seq(0,140000, 20000), limits = c(0,140000),
+                     labels = scales::comma) +
   theme(text= element_text(size=16))
 ggsave('../figures/fig2a.pdf', height = 4, width=8)
 
 ## Figure 2b: Metrics
 
-performance_all <- data %>% select(Referral_Year, PatientID, approached, authorized, procured, transplanted) %>% 
+performance_all <- data %>% select(Referral_Year, PatientID, approached, authorized, procured, transplanted, cms_tx) %>% 
                       group_by(Referral_Year) %>%
                       summarise(referrals = n(), 
                                 approaches = sum(approached), 
                                 authorizations = sum(authorized), 
                                 procurements = sum(procured), 
-                                transplants = sum(transplanted)) %>% rename(Year=Referral_Year) %>% 
+                                transplants = sum(transplanted), 
+                                cms_tx = sum(cms_tx)) %>% rename(Year=Referral_Year) %>% 
                       left_join(deaths %>% group_by(Year) %>% 
                                     summarise(calc_deaths = sum(calc_deaths)), c("Year")) %>% 
                         mutate(`Approach Rate` = approaches / referrals, 
                                `Authorization Rate` = authorizations / approaches, 
                                `Authorized Procurement Rate` = procurements / authorizations,
                                `Procured Transplant Rate` = transplants / procurements, 
-                               `Donation Rate (% of CALC Deaths)` = transplants / calc_deaths, 
-                               `Referred Donation Rate (% of Referrals)` = transplants / referrals,
+                               `Donation Rate (% of CALC Deaths)` = cms_tx / calc_deaths, 
+                               `Referred Donation Rate (% of Referrals)` = cms_tx / referrals,
                                `Referrals` = referrals, 
                                `CALC Deaths` = calc_deaths) %>% filter(Year < 2021) %>% 
-                          pivot_longer(cols = 8:15) %>% select(Year, name, value)
+                          pivot_longer(cols = 8:16) %>% select(Year, name, value)
 
 
 cbPalette <- c("#56B4E9", "#009E73", "#E69F00", "#CCC442","#0072B2", "#CC79A7", "#D55E00", "#999999", "#000000")
@@ -142,8 +142,22 @@ ggplot(performance_all %>% filter(name %in% c("Approach Rate", "Authorization Ra
             show.legend = FALSE) 
 ggsave('../figures/fig2b.pdf', height = 3, width=6)
 
-ggplot(performance_all %>% filter(!name %in% c("Approach Rate", "Authorization Rate", "Authorized Procurement Rate",
-                                               "Procured Transplant Rate", "Referrals", "CALC Deaths")), 
+ggplot(performance_all %>% 
+         filter(name %in% c("Referrals",  "CALC Deaths")), 
+       aes(x=Year, y=value, col=name, shape=name)) + 
+  geom_line(lty=3, lwd=0.5) + geom_point(size=3) + 
+  theme_classic() + theme(legend.position = "bottom") + 
+  scale_colour_manual(values = c("#009E73", "#006600")) + 
+  ylab("") + scale_y_continuous(breaks=seq(0, 30000, 5000), labels=unit_format(unit = "k", scale = 1/1000)) + 
+  scale_x_continuous(breaks=seq(2015, 2020, 1), limits = c(2014.9, 2020)) + 
+  guides(color=guide_legend(ncol=1), shape=guide_legend(ncol=1)) +
+  theme(text = element_text(size=18), legend.title = element_blank()) + 
+  geom_text(aes(label = paste0(round(value/1000, 1), "k"), size=1), nudge_x = 0, nudge_y = 1000,
+            show.legend = FALSE)
+ggsave('../figures/fig3a.pdf', height = 3, width=4.5)
+
+ggplot(performance_all %>% filter(name %in% c("Donation Rate (% of CALC Deaths)", 
+                                              "Referred Donation Rate (% of Referrals)")), 
        aes(x=Year, y=value, col=name, shape=name)) + 
   geom_line(lty=3, lwd=0.5) + geom_point(size=3) + 
   theme_classic() + xlim(2015, 2020) + theme(legend.position = "bottom") + 
@@ -154,53 +168,27 @@ ggplot(performance_all %>% filter(!name %in% c("Approach Rate", "Authorization R
   theme(text = element_text(size=16), legend.title = element_blank()) + 
   geom_text_repel(aes(label = round(value, 2), size=1), nudge_x = 0, 
                   show.legend = FALSE)
-ggsave('../figures/fig2d.pdf', height = 3, width=4.5)
-
-ggplot(performance_all %>% 
-         filter(name %in% c("Referrals",  "CALC Deaths")), 
-       aes(x=Year, y=value, col=name, shape=name)) + 
-  geom_line(lty=3, lwd=0.5) + geom_point(size=3) + 
-  theme_classic() + xlim(2015, 2020) + theme(legend.position = "bottom") + 
-  scale_colour_manual(values = c("#009E73", "#006600")) + 
-  ylab("") + scale_y_continuous(breaks=seq(0, 30000, 5000), labels=unit_format(unit = "k", scale = 1/1000)) + 
-  guides(color=guide_legend(ncol=1), shape=guide_legend(ncol=1)) +
-  theme(text = element_text(size=18), legend.title = element_blank()) + 
-  geom_text(aes(label = paste0(round(value/1000, 1), "k"), size=1), nudge_x = 0, nudge_y = 1000,
-                  show.legend = FALSE)
-ggsave('../figures/fig2c.pdf', height = 3, width=4.5)
+ggsave('../figures/fig3b.pdf', height = 3, width=4.5)
 
 # Fig 3: Racial disparities
 ## Fig 3a: Auth rates
-ggplot(race_performance %>% filter(name %in% c('Authorization Rate'), Year > 2014, Year < 2021, 
-                                   OPO %in% c('OPO1', 'OPO4', 'OPO5'),
-                                   Race %in% c('White / Caucasian') | 
-                                     (Race=='Black / African American' & OPO %in% c('OPO1', 'OPO2', 'OPO5')) |
-                                     (Race=='Hispanic' & OPO %in% c('OPO1', 'OPO4'))), 
-       aes(col=Race, shape=Race, y=value, x=Year)) + facet_wrap(.~OPO,ncol=3) + 
+ggplot(race_auth %>% filter(Race != "Other / Unknown"), 
+       aes(col=Race, shape=Race, y=`Authorization Rate`, x=Year)) + #facet_wrap(.~OPO,ncol=3) + 
   geom_point(size=3) + geom_line(lty=3) +
   theme_classic() + 
   scale_color_manual(values = c("#D55E00", "#009E73", "#0072B2")) + 
   theme(legend.position = "bottom", legend.title = element_blank(), text = element_text(size=14)) + 
-  ylab("Authorization Rate") + scale_y_continuous(breaks=seq(0,1,0.1), limits = c(0, 1)) 
-ggsave('../figures/fig3a.pdf', height = 4, width=8)
+  ylab("Authorization Rate") + scale_y_continuous(breaks=seq(0,1,0.1), limits = c(0, 1)) + 
+  scale_x_continuous(breaks=seq(2015, 2020, 1), limits = c(2015, 2020))
+ggsave('../figures/fig5.pdf', height = 3, width=5.5)
 
-## Fig 3b: Approach times
+## Combined numbers
 
-data$bd_to_approach <- (data$time_approached - data$time_brain_death)/(60*60)
-data$ref_to_approach <- (data$time_referred - data$time_referred)/(60*60)
-ggplot(data %>% filter(OPO=="OPO1", 
-                       brain_death, 
-                       approached,
-                       !is.na(bd_to_approach), 
-                       Race !="Other / Unknown"), aes(x=bd_to_approach, y=Race, fill=Race)) + 
-  scale_fill_manual(values = c("#D55E00", "#009E73", "#0072B2")) + 
-  geom_boxplot() + 
-  xlim(-5, 8) + 
-  theme_classic() + ylab("") + 
-  theme(legend.title = element_blank(), text = element_text(size=14), 
-        legend.position = "none") + 
-  xlab("Time between Brain Death and Approach (hours)")
-ggsave('../figures/fig3b.pdf', height = 4, width=8)
+data %>% select(Race, approached, authorized) %>% 
+  group_by(Race) %>%
+  summarise(approaches = sum(approached), 
+            authorizations = sum(authorized)) %>% 
+  mutate(`Authorization Rate` = authorizations / approaches)
 
 # Table 1: demographics
 
@@ -228,8 +216,74 @@ table1(~ Age + Gender + Race + `Death Type` + `Cause of Death` | OPO, data=data_
 ## Latex Table
 t1kable(table1(~ Age + Gender + Race + `Death Type` + `Cause of Death` | OPO, data=data_table,render.categorical=render.categorical),
               format = 'latex')
-    
 
+# Investigate timezone
+
+data$hour_referral <- cut(hour(data$time_referred), breaks=seq(-1,24,3), 
+                          labels = seq(1.5, 22.5, 3))
+data$hour_referral <- as.numeric(as.character(data$hour_referral))
+
+data$hour_approach <- cut(hour(data$time_approached), breaks=seq(-1,24,3), 
+                          labels = seq(1.5, 22.5, 3))
+data$hour_approach <- as.numeric(as.character(data$hour_approach))
+
+ggplot(data, aes(x=hour_referral, col=OPO)) + geom_density(bw=3) + 
+  scale_x_continuous(limits = c(0,24), breaks = seq(0,24,3))
+
+ggplot(data, aes(x=hour_approach, col=OPO)) + geom_density(bw=3) + 
+  scale_x_continuous(limits = c(0,24), breaks = seq(0,24,3))
+
+# Process
+
+data_process <- read.csv('../Data/referrals.csv', stringsAsFactors = FALSE)
+data_process <- data_process %>% mutate_at(c('brain_death', 'approached', 'authorized', 'procured', 'transplanted', 
+                             'Tissue_Referral', 'Eye_Referral'), as.logical)
+
+
+data_process$time_approached <- ifelse(!data_process$approached,
+                                       "",
+                                       ifelse(data_process$time_approached=="", 
+                                              data_process$time_referred, 
+                                              data_process$time_approached))
+
+data_process$time_authorized <- ifelse(!data_process$authorized,
+                                       "", 
+                                       ifelse(data_process$time_authorized=="", 
+                                              data_process$time_approached, 
+                                              data_process$time_authorized))
+
+data_process$time_procured <- ifelse(!data_process$procured,
+                                       "", 
+                                       ifelse(data_process$time_procured=="",
+                                              data_process$time_authorized, 
+                                              data_process$time_procured))
+
+data_process$time_transplanted <- ""
+data_process$time_transplanted[data_process$transplanted] <- 
+  data_process$time_procured[data_process$transplanted]
+
+data_process <- data_process %>% 
+  mutate_at(names(data_process)[grepl("time_*", names(data_process))], 
+                                           date_convert)
+
+ranked_time <- data.frame(t(apply(data_process %>% select(time_referred, time_approached, 
+                                               time_authorized, time_procured, 
+                                               time_transplanted), 1, 
+                       function(x) rank(x, na.last='keep', ties.method = 'first'))))
+
+ranked_time %>% group_by(time_referred, time_approached, 
+                         time_authorized, time_procured, 
+                         time_transplanted) %>% 
+  summarise(n=n()) %>% arrange(-n)
+
+
+data %>% mutate(check_na = is.na(time_approached)) %>% 
+  group_by(OPO, approached, check_na) %>% summarise(n=n()) %>% 
+  filter(!approached, !check_na)
+
+data %>% mutate(check_na = is.na(time_authorized)) %>% 
+  group_by(OPO, authorized, check_na) %>% summarise(n=n()) %>% 
+  filter(!authorized, !check_na)
 
 
 
