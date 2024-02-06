@@ -15,6 +15,8 @@ library(pROC)
 library(ModelMetrics)
 library(PRROC)
 library(table1)
+library(bupaverse)
+library(processmapR)
 
 ## Import Data
 
@@ -217,73 +219,25 @@ table1(~ Age + Gender + Race + `Death Type` + `Cause of Death` | OPO, data=data_
 t1kable(table1(~ Age + Gender + Race + `Death Type` + `Cause of Death` | OPO, data=data_table,render.categorical=render.categorical),
               format = 'latex')
 
-# Investigate timezone
+## Process Mining
 
-data$hour_referral <- cut(hour(data$time_referred), breaks=seq(-1,24,3), 
-                          labels = seq(1.5, 22.5, 3))
-data$hour_referral <- as.numeric(as.character(data$hour_referral))
+log <- read.csv("notebooks/event_log.csv")
+# We create an artificial complete timestamp that is the same as the start timestamp to make it compatible with the import
+log$Timestamp2 <- log$Timestamp
+log <- log %>%
+        dplyr::rename(start = Timestamp, 
+                      complete = Timestamp2) %>%
+          convert_timestamps(columns = c("start","complete"), format = ymd_hms) %>%
+  activitylog(case_id = "PatientID",
+              activity_id = "Activity",
+              timestamps = c("start","complete"),
+              resource_id = "OPO") 
 
-data$hour_approach <- cut(hour(data$time_approached), breaks=seq(-1,24,3), 
-                          labels = seq(1.5, 22.5, 3))
-data$hour_approach <- as.numeric(as.character(data$hour_approach))
+var_plot <- log %>%
+  trace_explorer(n_traces = 10, label_size =4)
+var_plot
+ggsave("../figures/variants.pdf", plot = var_plot, width = 7, height = 6)
 
-ggplot(data, aes(x=hour_referral, col=OPO)) + geom_density(bw=3) + 
-  scale_x_continuous(limits = c(0,24), breaks = seq(0,24,3))
-
-ggplot(data, aes(x=hour_approach, col=OPO)) + geom_density(bw=3) + 
-  scale_x_continuous(limits = c(0,24), breaks = seq(0,24,3))
-
-# Process
-
-data_process <- read.csv('../Data/referrals.csv', stringsAsFactors = FALSE)
-data_process <- data_process %>% mutate_at(c('brain_death', 'approached', 'authorized', 'procured', 'transplanted', 
-                             'Tissue_Referral', 'Eye_Referral'), as.logical)
-
-
-data_process$time_approached <- ifelse(!data_process$approached,
-                                       "",
-                                       ifelse(data_process$time_approached=="", 
-                                              data_process$time_referred, 
-                                              data_process$time_approached))
-
-data_process$time_authorized <- ifelse(!data_process$authorized,
-                                       "", 
-                                       ifelse(data_process$time_authorized=="", 
-                                              data_process$time_approached, 
-                                              data_process$time_authorized))
-
-data_process$time_procured <- ifelse(!data_process$procured,
-                                       "", 
-                                       ifelse(data_process$time_procured=="",
-                                              data_process$time_authorized, 
-                                              data_process$time_procured))
-
-data_process$time_transplanted <- ""
-data_process$time_transplanted[data_process$transplanted] <- 
-  data_process$time_procured[data_process$transplanted]
-
-data_process <- data_process %>% 
-  mutate_at(names(data_process)[grepl("time_*", names(data_process))], 
-                                           date_convert)
-
-ranked_time <- data.frame(t(apply(data_process %>% select(time_referred, time_approached, 
-                                               time_authorized, time_procured, 
-                                               time_transplanted), 1, 
-                       function(x) rank(x, na.last='keep', ties.method = 'first'))))
-
-ranked_time %>% group_by(time_referred, time_approached, 
-                         time_authorized, time_procured, 
-                         time_transplanted) %>% 
-  summarise(n=n()) %>% arrange(-n)
-
-
-data %>% mutate(check_na = is.na(time_approached)) %>% 
-  group_by(OPO, approached, check_na) %>% summarise(n=n()) %>% 
-  filter(!approached, !check_na)
-
-data %>% mutate(check_na = is.na(time_authorized)) %>% 
-  group_by(OPO, authorized, check_na) %>% summarise(n=n()) %>% 
-  filter(!authorized, !check_na)
 
 
 
