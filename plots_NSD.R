@@ -201,11 +201,11 @@ render.categorical <- function(x, ...) {
 data_table <- data %>% select(OPO, Age, Gender, Race, brain_death, 
                               Cause_of_Death_UNOS, Mechanism_of_Death, Circumstances_of_Death) %>% 
   mutate(Gender=factor(Gender, levels = c("F", "M", ""), labels=c("Female", "Male", "Unknown")),
-         Age = cut(Age, breaks=c(0,24,44,64,75, 101), include.lowest = FALSE, 
+         Age = cut(Age, breaks=c(-1,24,44,64,75, 101), include.lowest = FALSE, 
                    labels=c("Under 25", "25-44", "45-64", "65-75", "Over 75")),
          Race=factor(Race, levels=c("White / Caucasian", "Black / African American","Hispanic","Other / Unknown")), 
          OPO = factor(OPO),
-         brain_death = factor(brain_death, levels=c(FALSE, TRUE), label=c("Brain death", "Cardiac death")), 
+         brain_death = factor(brain_death, levels=c(TRUE,FALSE), label=c("Brain death", "Cardiac death")), 
          Cause_of_Death_UNOS = factor(ifelse(Cause_of_Death_UNOS %in% c("Anoxia", "", "CVA/Stroke", "Head Trauma"), 
                                              Cause_of_Death_UNOS, "Other"), 
                                       levels = c("Anoxia", "CVA/Stroke", "Head Trauma", "Other", ""), 
@@ -238,6 +238,18 @@ var_plot <- log %>%
 var_plot
 ggsave("../figures/variants.pdf", plot = var_plot, width = 7, height = 6)
 
+
+
+data$bd_to_approach <- difftime(data$time_approached, data$time_brain_death, units='hours')
+
+data$bd_to_approach <- pmax(pmin(data$bd_to_approach, quantile(data$bd_to_approach, 0.99, na.rm = TRUE)), 
+                            quantile(data$bd_to_approach, 0.01, na.rm = TRUE))
+
+ggplot(data, aes(x=bd_to_approach)) + geom_histogram()
+
+quantile(data$bd_to_approach, 0.7, na.rm = TRUE)
+mean(data$bd_to_approach < 24, na.rm = TRUE)
+mean(data$transplanted[data$brain_death])
 
 
 
