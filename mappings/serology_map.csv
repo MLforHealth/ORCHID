@@ -1,0 +1,606 @@
+serology_name,serology_name_Other,serology_class,serology_standardized_name
+ABO/Rh,,ABO/ Rh blood type,ABO/Rh
+Chagas,,Chagas ,Chagas
+Chagas NAT,,Chagas ,Chagas NAT (DNA)
+Anti-CMV,,CMV,CMV Ab
+CMV,,CMV,CMV
+CMV IgM,,CMV,CMV IgM Ab
+EBNA,,EBV,EBNA Ab
+EBV,,EBV,EBV
+EBV (VCA) (IgG),,EBV,EBV VCA IgG Ab
+EBV (VCA) (IgM),,EBV,EBV VCA IgM Ab
+EBV IgG,,EBV,EBV IgG Ab
+EBV IgM,,EBV,EBV IgM Ab
+EBV_IgG,,EBV,EBV IgG Ab
+EBV_IgM,,EBV,EBV IgM Ab
+Anti HBc,,HBV,HBc Ab
+Anti-HBc,,HBV,HBc Ab
+Anti-HBcAb,,HBV,HBc Ab
+HBc Total,,HBV,HBc total Ab
+HBC_Total_AB,,HBV,HBc total Ab
+HBcAB IgM,,HBV,HBc IgM Ab
+HBsAb,,HBV,HBs Ab
+HBsAG,,HBV,HBs Ag
+HBsAg,,HBV,HBs Ag
+HbsAg,,HBV,HBs Ag
+HBsAg#,,HBV,HBs Ag
+HBV DNA,,HBV,HBV NAT (DNA)
+HBV NAT,,HBV,HBV NAT (DNA)
+HBV_NAT,,HBV,HBV NAT (DNA)
+Hepatitis BC Ab,,HBV,HBc Ab
+Hepatitis Bs Ag,,HBV,HBs Ag
+NAT HBV,,HBV,HBV NAT (DNA)
+Anti HCV,,HCV,HCV Ab
+Anti-HCV,,HCV,HCV Ab
+HCV Ab,,HCV,HCV Ab
+HCV NAT,,HCV,HCV NAT (RNA)
+HCV NAT (TMA),,HCV,HCV NAT (RNA)
+HCV RNA,,HCV,HCV NAT (RNA)
+HCV_AB,,HCV,HCV Ab
+HCV_NAT,,HCV,HCV NAT (RNA)
+Hepatitis C Ab,,HCV,HCV Ab
+NAT HCV,,HCV,HCV NAT (RNA)
+Anti HIV 1 and 2,,HIV,HIV-1/2 Ab
+Anti-HIV I/II,,HIV,HIV-1/2 Ab
+HIV,,HIV,HIV
+HIV 1/2 plus O Ab,,HIV,HIV-1/2/O Ab
+HIV Ag/Ab Combo,,HIV,HIV Ag/Ab Combo
+HIV Ag/Ab Combo Assay,,HIV,HIV Ag/Ab Combo
+HIV I/II,,HIV,HIV-1/2
+HIV NAT,,HIV,HIV NAT (RNA)
+HIV NAT (TMA),,HIV,HIV NAT (RNA) (TMA)
+HIV O EIA,,HIV,HIV-1 O Ab
+HIV_NAT,,HIV,HIV NAT (RNA)
+HIV-1 RNA,,HIV,HIV-1 NAT (RNA)
+HIV-1/HCV/HBV NAT (ULTRIO),,HIV,HIV-1/HCV/HBV NAT
+HIV-1/HCV/HBV NAT Ultrio,,HIV,HIV-1/HCV/HBV NAT
+NAT HIV,,HIV,HIV NAT (RNA)
+Anti-HTLV I/II,,HTLV,HTLV-1/2 Ab
+HTLV I/II,,HTLV,HTLV-1/2
+HTLV I/II AB,,HTLV,HTLV-1/2 Ab
+HTLV NAT,,HTLV,HTLV NAT (DNA)
+HTLV_I_II,,HTLV,HTLV-1/2
+Strongyloides,,Strongyloides,Strongyloides
+Confirmatory - Syphilis,,Syphilis,Syphilis - Confirmatory
+MHATP,,Syphilis,"Syphilis (Treponemal Ab, TPHA)"
+RPR,,Syphilis,RPR
+RPR/VDRL,,Syphilis,RPR/VDRL
+RPR#,,Syphilis,RPR
+Syphilis,,Syphilis,Syphilis
+Toxo Ab IgG,,Toxoplasma,Toxoplasma IgG Ab
+Toxo_IgG,,Toxoplasma,Toxoplasma IgG Ab
+WNV,,WNV,WNV
+WNV NAT,,WNV,WNV NAT (RNA)
+WNV RNA,,WNV,WNV NAT (RNA)
+Other1,Chagas,Chagas ,Chagas
+Other1,chagas,Chagas ,Chagas
+Other1,Chagas (EIA),Chagas ,Chagas (T. cruzi Ab)
+Other1,Chagas Ab,Chagas ,Chagas (T. cruzi Ab)
+Other1,T. Cruzi Antibody,Chagas ,Chagas (T. cruzi Ab)
+Other1,Chagas IGG,Chagas ,Chagas (T. cruzi IgG Ab)
+Other1,T Cruzi IGG,Chagas ,Chagas (T. cruzi IgG Ab)
+Other1,T. Cruzi IGG,Chagas ,Chagas (T. cruzi IgG Ab)
+Other1,Chagas IgM,Chagas ,Chagas (T. cruzi IgM Ab)
+Other1,T Cruzi IgM,Chagas ,Chagas (T. cruzi IgM Ab)
+Other2,CHAGAS,Chagas ,Chagas
+Other2,Chagas,Chagas ,Chagas
+Other2,Chagas AB,Chagas ,Chagas (T. cruzi Ab)
+Other2,Chagas Ab,Chagas ,Chagas (T. cruzi Ab)
+Other2,chagas EIA,Chagas ,Chagas (T. cruzi Ab)
+Other2,T-Cruzi,Chagas ,Chagas (T. cruzi Ab)
+Other2,Chagas IGM,Chagas ,Chagas (T. cruzi IgM Ab)
+Other2,T Cruzi IGM,Chagas ,Chagas (T. cruzi IgM Ab)
+Other2,T. Cruzi IGM,Chagas ,Chagas (T. cruzi IgM Ab)
+Other3,T cruzi,Chagas ,Chagas (T. cruzi Ab)
+Other4,Chagas,Chagas ,Chagas
+Other5,Chagas,Chagas ,Chagas
+Other1,Anti-CMV,CMV,CMV Ab
+Other1,CMV IgG,CMV,CMV IgG Ab
+Other1,CMV IgM,CMV,CMV IgM Ab
+Other2,CMV IgG,CMV,CMV IgG Ab
+Other2,CMV IgM,CMV,CMV IgM Ab
+Other4,CMV Ab,CMV,CMV Ab
+Other1,COCCI,Coccidioides,Coccidioides
+Other1,Cocci,Coccidioides,Coccidioides
+Other1,cocci,Coccidioides,Coccidioides
+Other1,Cocci.,Coccidioides,Coccidioides
+Other1,Coccidiodes,Coccidioides,Coccidioides
+Other1,coccidiodes,Coccidioides,Coccidioides
+Other1,Coccidioides,Coccidioides,Coccidioides
+Other1,Coccidioidomycosis,Coccidioides,Coccidioides
+Other1,Coccidoidomycosis,Coccidioides,Coccidioides
+Other1,Cocciodies,Coccidioides,Coccidioides
+Other1,Cocci Ab,Coccidioides,Coccidioides Ab
+Other1,Cocci ab,Coccidioides,Coccidioides Ab
+Other1,cocci AB,Coccidioides,Coccidioides Ab
+Other1,cocci Ab,Coccidioides,Coccidioides Ab
+Other1,cocci ab,Coccidioides,Coccidioides Ab
+Other1,Cocci Ab - redraw,Coccidioides,Coccidioides Ab
+Other1,cocci immunodiffusion,Coccidioides,Coccidioides Ab
+Other1,Coccidiodes Ab,Coccidioides,Coccidioides Ab
+Other1,Coccidioides Ab,Coccidioides,Coccidioides Ab
+Other1,Coccidioides ab,Coccidioides,Coccidioides Ab
+Other1,coccidioides Ab,Coccidioides,Coccidioides Ab
+Other1,coccidioides ab,Coccidioides,Coccidioides Ab
+Other1,Coccidioides Ab Immunodiffusion,Coccidioides,Coccidioides Ab
+Other1,Coccidioides Antibody,Coccidioides,Coccidioides Ab
+Other1,Coccidoides Ab,Coccidioides,Coccidioides Ab
+Other1,cooci ab,Coccidioides,Coccidioides Ab
+Other1,Cocci  IgG,Coccidioides,Coccidioides IgG Ab
+Other1,Cocci Ab IgG,Coccidioides,Coccidioides IgG Ab
+Other1,Cocci CF,Coccidioides,Coccidioides IgG Ab
+Other1,Cocci IgG,Coccidioides,Coccidioides IgG Ab
+Other1,cocci IgG,Coccidioides,Coccidioides IgG Ab
+Other1,cocci igg,Coccidioides,Coccidioides IgG Ab
+Other1,Cocci IgG (EIA),Coccidioides,Coccidioides IgG Ab
+Other1,cocci IgG (EIA),Coccidioides,Coccidioides IgG Ab
+Other1,Cocci. IgG,Coccidioides,Coccidioides IgG Ab
+Other1,Coccidioides  IgG,Coccidioides,Coccidioides IgG Ab
+Other1,"Coccidioides Antibody, Complement Fixation",Coccidioides,Coccidioides IgG Ab
+Other1,Coccidioides IgG,Coccidioides,Coccidioides IgG Ab
+Other1,coccidioides IgG,Coccidioides,Coccidioides IgG Ab
+Other1,Coccidoides IgG,Coccidioides,Coccidioides IgG Ab
+Other1,Cocciodiodies IgG,Coccidioides,Coccidioides IgG Ab
+Other1,Cocci IgG/IgM,Coccidioides,Coccidioides IgG/IgM Ab
+Other1,cocci igG/igM,Coccidioides,Coccidioides IgG/IgM Ab
+Other1,Cocci IgM,Coccidioides,Coccidioides IgM Ab
+Other1,cocci IgM,Coccidioides,Coccidioides IgM Ab
+Other1,cocci igm,Coccidioides,Coccidioides IgM Ab
+Other1,Cocci IgM (EIA),Coccidioides,Coccidioides IgM Ab
+Other1,Coccidiodes IgM,Coccidioides,Coccidioides IgM Ab
+Other1,Coccidioides IgM,Coccidioides,Coccidioides IgM Ab
+Other2,COCCI,Coccidioides,Coccidioides
+Other2,Cocci,Coccidioides,Coccidioides
+Other2,cocci,Coccidioides,Coccidioides
+Other2,Coccidiodes,Coccidioides,Coccidioides
+Other2,Coccidioides,Coccidioides,Coccidioides
+Other2,coccidioides,Coccidioides,Coccidioides
+Other2,Coccidioidomycosis,Coccidioides,Coccidioides
+Other2,Cocci Ab,Coccidioides,Coccidioides Ab
+Other2,cocci ab,Coccidioides,Coccidioides Ab
+Other2,Cocci Ig,Coccidioides,Coccidioides Ab
+Other2,Coccidiodes Ab,Coccidioides,Coccidioides Ab
+Other2,Coccidioides Ab,Coccidioides,Coccidioides Ab
+Other2,"Cocci Ab IgG, ID",Coccidioides,Coccidioides IgG Ab
+Other2,Cocci IgG,Coccidioides,Coccidioides IgG Ab
+Other2,cocci IgG,Coccidioides,Coccidioides IgG Ab
+Other2,cocci igg,Coccidioides,Coccidioides IgG Ab
+Other2,Cocci IgG (EIA),Coccidioides,Coccidioides IgG Ab
+Other2,Coccidioides Ab Complement Fixation,Coccidioides,Coccidioides IgG Ab
+Other2,Coccidioides Antibody IgG,Coccidioides,Coccidioides IgG Ab
+Other2,Coccidioides IgG,Coccidioides,Coccidioides IgG Ab
+Other2,Cocci IgG/IgM,Coccidioides,Coccidioides IgG/IgM Ab
+Other2,cocci IgG/IgM,Coccidioides,Coccidioides IgG/IgM Ab
+Other2,Cocci IgGM,Coccidioides,Coccidioides IgG/IgM Ab
+Other2,Coccidioides IgG/IgM,Coccidioides,Coccidioides IgG/IgM Ab
+Other2,Cocciodiodies IgGM,Coccidioides,Coccidioides IgG/IgM Ab
+Other2,Cocci Ab IgM,Coccidioides,Coccidioides IgM Ab
+Other2,Cocci Ag IgM,Coccidioides,Coccidioides IgM Ab
+Other2,Cocci IgM,Coccidioides,Coccidioides IgM Ab
+Other2,Cocci igM,Coccidioides,Coccidioides IgM Ab
+Other2,cocci IgM,Coccidioides,Coccidioides IgM Ab
+Other2,cocci igm,Coccidioides,Coccidioides IgM Ab
+Other2,Cocci IgM (EIA,Coccidioides,Coccidioides IgM Ab
+Other2,Cocci IgM (EIA),Coccidioides,Coccidioides IgM Ab
+Other2,cocci IgM (EIA),Coccidioides,Coccidioides IgM Ab
+Other2,Cocci. IgM,Coccidioides,Coccidioides IgM Ab
+Other2,Coccidioides  IgM,Coccidioides,Coccidioides IgM Ab
+Other2,Coccidioides IgM,Coccidioides,Coccidioides IgM Ab
+Other2,coccidioides IgM,Coccidioides,Coccidioides IgM Ab
+Other2,Coccidoides IgM,Coccidioides,Coccidioides IgM Ab
+Other2,Cocciodiodies IgM,Coccidioides,Coccidioides IgM Ab
+Other2,Coci IgM,Coccidioides,Coccidioides IgM Ab
+Other3,Cocci,Coccidioides,Coccidioides
+Other3,Coccidioides,Coccidioides,Coccidioides
+Other3,cocci complement fixation,Coccidioides,Coccidioides IgG Ab
+Other3,Cocci IgG,Coccidioides,Coccidioides IgG Ab
+Other3,cocci IgG,Coccidioides,Coccidioides IgG Ab
+Other3,Coccidioides IgG,Coccidioides,Coccidioides IgG Ab
+Other3,Cocciodiodies IgG,Coccidioides,Coccidioides IgG Ab
+Other3,Cocci IgM,Coccidioides,Coccidioides IgM Ab
+Other3,Coccidioides Antibody IgM,Coccidioides,Coccidioides IgM Ab
+Other3,Coccidioides IgM,Coccidioides,Coccidioides IgM Ab
+Other4,Cocci IgM,Coccidioides,Coccidioides IgM Ab
+Other4,cocci IgM,Coccidioides,Coccidioides IgM Ab
+Other4,Coccidioides IgM,Coccidioides,Coccidioides IgM Ab
+Other4,Cocciodiodies IgM,Coccidioides,Coccidioides IgM Ab
+Other5,Coccidioides IgM,Coccidioides,Coccidioides IgM Ab
+Other1,Cryptococcal Ag,Cryptococcus,Cryptococcal Ag
+Other3,Cryptococcal Ag,Cryptococcus,Cryptococcal Ag
+Other1,EBNA/EBV-EA-D IgM,EBV,EBNA + EA-D IgM Ab
+Other1,EBNA IgG,EBV,EBNA IgG Ab
+Other1,EBNA Igg,EBV,EBNA IgG Ab
+Other1,EBNA IGM,EBV,EBNA IgM Ab
+Other1,EBNA IgM,EBV,EBNA IgM Ab
+Other1,EBNA Igm,EBV,EBNA IgM Ab
+Other1,EBNA 1 IgG EIA,EBV,EBNA-1 IgG Ab
+Other1,EBNA-1 IGM EIA,EBV,EBNA-1 IgM Ab
+Other1,EBNA-1 IgM EIA,EBV,EBNA-1 IgM Ab
+Other1,Early EBV EA Igg,EBV,EBV EA IgG Ab
+Other1,EB EA IgG,EBV,EBV EA IgG Ab
+Other1,EB Early AG IGG,EBV,EBV EA IgG Ab
+Other1,EB early AG IGG,EBV,EBV EA IgG Ab
+Other1,EB-EA IGG,EBV,EBV EA IgG Ab
+Other1,EBV -EA-D IgM EIA,EBV,EBV EA IgG Ab
+Other1,EBV EA D IgG,EBV,EBV EA IgG Ab
+Other1,EBV EA IGG,EBV,EBV EA IgG Ab
+Other1,EBV EA IgG,EBV,EBV EA IgG Ab
+Other1,EBV EA Igg,EBV,EBV EA IgG Ab
+Other1,EBV EA igg,EBV,EBV EA IgG Ab
+Other1,EBV ea Igg,EBV,EBV EA IgG Ab
+Other1,EBV EA IGG Early,EBV,EBV EA IgG Ab
+Other1,EBV EA-D IgG,EBV,EBV EA IgG Ab
+Other1,EBV EA-D igG,EBV,EBV EA IgG Ab
+Other1,EBV EA-D IGG EIA,EBV,EBV EA IgG Ab
+Other1,EBV EAD IgG,EBV,EBV EA IgG Ab
+Other1,EBV early antigen IGG,EBV,EBV EA IgG Ab
+Other1,EBV IgG Early,EBV,EBV EA IgG Ab
+Other1,EBV-EA IgG,EBV,EBV EA IgG Ab
+Other1,EBV-EA-D IgG,EBV,EBV EA IgG Ab
+Other1,EBV-EA-D igg,EBV,EBV EA IgG Ab
+Other1,EBV-EA-O-IgG,EBV,EBV EA IgG Ab
+Other1,EBV-EA-D IgG/IGM,EBV,EBV EA IgG/IgM Ab
+Other1,EBV EA D IgM,EBV,EBV EA IgM Ab
+Other1,EBV EA igm,EBV,EBV EA IgM Ab
+Other1,EBV EA-D IgM,EBV,EBV EA IgM Ab
+Other1,EBV EA-d IgM,EBV,EBV EA IgM Ab
+Other1,EBV-EA-0 lgM EIA,EBV,EBV EA IgM Ab
+Other1,EBV-EA-D IGM,EBV,EBV EA IgM Ab
+Other1,EBV-EA-D IgM,EBV,EBV EA IgM Ab
+Other1,EBV-EA-D Igm EIA,EBV,EBV EA IgM Ab
+Other1,EBV-VA-D IgM,EBV,EBV EA IgM Ab
+Other1,EBV EIA IGM,EBV,EBV IgM Ab
+Other1,EBV VA IGG,EBV,EBV VCA IgG Ab
+Other2,EBNA/EBV-EA-D IgG,EBV,EBNA + EA-D IgG Ab
+Other2,EBNA and EBV EA-D IGM EIA,EBV,EBNA + EA-D IgM Ab
+Other2,"EBNA IgM, EBV-EA-D IgM",EBV,EBNA + EA-D IgM Ab
+Other2,EBNA IgM/EBV EA-D IgM EIA,EBV,EBNA + EA-D IgM Ab
+Other2,EBNA IgM/EBV-EA-D IgM,EBV,EBNA + EA-D IgM Ab
+Other2,EBNA/EBV-EA-D IgM,EBV,EBNA + EA-D IgM Ab
+Other2,EBV-EA-D-IgM/EBNA-1 IgM EIA,EBV,EBNA + EA-D IgM Ab
+Other2,EBNA IGM,EBV,EBNA IgM Ab
+Other2,EBNA IgM,EBV,EBNA IgM Ab
+Other2,EBNA Igm,EBV,EBNA IgM Ab
+Other2,EBNA igm,EBV,EBNA IgM Ab
+Other2,ebna igm,EBV,EBNA IgM Ab
+Other2,EBNA IGM EIA,EBV,EBNA IgM Ab
+Other2,EBNA IgM/IgG,EBV,EBNA IgM/IgG Ab
+Other2,EBNA-1 IgG EIA,EBV,EBNA-1 IgG Ab
+Other2,EBNA-1-IgG EIA,EBV,EBNA-1 IgG Ab
+Other2,EBNA -1 IgM EIA,EBV,EBNA-1 IgM Ab
+Other2,EBNA-1 IgM,EBV,EBNA-1 IgM Ab
+Other2,EBNA-1 IgM EAI,EBV,EBNA-1 IgM Ab
+Other2,EBNA-1 IgM EIA,EBV,EBNA-1 IgM Ab
+Other2,EBNA-1 IgMEIA,EBV,EBNA-1 IgM Ab
+Other2,EBNA-1-IgM EIA,EBV,EBNA-1 IgM Ab
+Other2,EBNA-1gM EIA,EBV,EBNA-1 IgM Ab
+Other2,EBV EIA,EBV,EBV Ab
+Other2,EBV EA-D,EBV,EBV EA Ab
+Other2,EBV EA-D IgM/IgG,EBV,EBV EA Ab
+Other2,EBV-EA-D,EBV,EBV EA Ab
+Other2,EBV - EA- IGG,EBV,EBV EA IgG Ab
+Other2,EBV -EA-D IgG,EBV,EBV EA IgG Ab
+Other2,EBV -EA-D IgG EIA,EBV,EBV EA IgG Ab
+Other2,EBV EA IgG,EBV,EBV EA IgG Ab
+Other2,EBV EA-D IgG,EBV,EBV EA IgG Ab
+Other2,EBV-EA-D IgG,EBV,EBV EA IgG Ab
+Other2,EBV-EA-D IgG EIA,EBV,EBV EA IgG Ab
+Other2,EBV-EA-D IgG/IgM,EBV,EBV EA IgG/IgM Ab
+Other2,EBV-EA-D IGM/IgG,EBV,EBV EA IgG/IgM Ab
+Other2,EBV-EA-D IgM/IgG,EBV,EBV EA IgG/IgM Ab
+Other2,EBV EA D IgM,EBV,EBV EA IgM Ab
+Other2,EBV EA D IgM EIA,EBV,EBV EA IgM Ab
+Other2,EBV EA igm,EBV,EBV EA IgM Ab
+Other2,EBV EA-D IgM,EBV,EBV EA IgM Ab
+Other2,EBV EA-D igm,EBV,EBV EA IgM Ab
+Other2,EBV Early Antigem IGM,EBV,EBV EA IgM Ab
+Other2,EBV early antigen IGM,EBV,EBV EA IgM Ab
+Other2,EBV early IGM,EBV,EBV EA IgM Ab
+Other2,EBV ED IgM,EBV,EBV EA IgM Ab
+Other2,EBV-EA-D IgM,EBV,EBV EA IgM Ab
+Other2,EBV-EA-D Igm,EBV,EBV EA IgM Ab
+Other2,EBV-EA-D igm,EBV,EBV EA IgM Ab
+Other2,EBV-EA-D IGM EIA,EBV,EBV EA IgM Ab
+Other2,EBV-EA-D IgM EIA,EBV,EBV EA IgM Ab
+Other2,EBV-EA-D-IgM,EBV,EBV EA IgM Ab
+Other2,EBV-EA-O-Igm,EBV,EBV EA IgM Ab
+Other2,EBV-ED-IgM,EBV,EBV EA IgM Ab
+Other2,EBVEADIgM/CMV IgG,EBV,EBV EA IgM Ab/ CMV IgG Ab
+Other2,EBV IgM,EBV,EBV IgM Ab
+Other2,EB VCA IgG,EBV,EBV VCA IgG Ab
+Other3,EB VCA IgM,EBV,EBV VCA IgM Ab
+Other1,Hepatitis A Total Ab,HAV,Hepatitis A Ab
+Other1,Hep A IgM,HAV,Hepatitis A IgM Ab
+Other1,Hepatitis A AgM Ab,HAV,Hepatitis A IgM Ab
+Other1,Hepatitis A PCR,HAV,Hepatitis A PCR
+Other2,Hep A Ab,HAV,Hepatitis A Ab
+Other2,Hep A IgG,HAV,Hepatitis A IgG Ab
+Other3,Hep A Igm,HAV,Hepatitis A IgM Ab
+Other1,HBcAB IgG,HBV,HBc Ab
+Other1,Anti-Hepatitis B Core IgM,HBV,HBc IgM Ab
+Other1,Hep Bc IgM Ab,HBV,HBc IgM Ab
+Other1,Hep Bs Ag Neutralization,HBV,HBs Ag
+Other1,HBV,HBV,HBV
+Other1,HBV NAT,HBV,HBV NAT (DNA)
+Other1,Ultrio Elite HBV,HBV,HBV NAT (DNA)
+Other1,Ultrio HBV,HBV,HBV NAT (DNA)
+Other2,Hepatitis Bc IgM Ab,HBV,HBc IgM Ab
+Other2,Hepatitis B sAg Confirmatory Assay,HBV,HBs Ag
+Other3,Hepatitis B sAg Confirmatory Assay,HBV,HBs Ag
+Other1,Hep. C Ab,HCV,HCV Ab
+Other1,Ultrio Elite HCV,HCV,HCV NAT (RNA)
+Other3,Hepatitis C Virus (HCV) Inno-LIA,HCV,HCV Ab
+Other3,Ultrio Elite HCV,HCV,HCV NAT (RNA)
+Other4,Ultrion HCV,HCV,HCV NAT (RNA)
+Other1,HSV,Herpes Virus,HSV
+Other1,Histoplasma Ab,Histoplasma,Histoplasma Ab
+Other1,Histoplasma Ag,Histoplasma,Histoplasma Ag
+Other2,Histoplasma,Histoplasma,Histoplasma
+Other2,Histoplasmosis,Histoplasma,Histoplasma
+Other2,histoplasma ab,Histoplasma,Histoplasma Ab
+Other2,Histoplasma Ag,Histoplasma,Histoplasma Ag
+Other3,histoplasma ag,Histoplasma,Histoplasma Ag
+Other1,HIV-1 WB,HIV,HIV-1 Ab (Western blot)
+Other1,HIV-1 Western Blot,HIV,HIV-1 Ab (Western blot)
+Other1,HIV-1 western blot,HIV,HIV-1 Ab (Western blot)
+Other1,Multispot HIV1/2,HIV,HIV-1/2 Ab (Multispot)
+Other2,HIV Western Blot,HIV,HIV Ab (Western blot)
+Other2,HIV-Western Blot,HIV,HIV Ab (Western blot)
+Other2,Ultrio Elite HIV-1/2,HIV,HIV NAT (RNA)
+Other2,Ultrio HIV-1,HIV,HIV NAT (RNA)
+Other2,HIV-1 Qualitative Western Blot,HIV,HIV-1 Ab (Western blot)
+Other2,HIV-1 WB,HIV,HIV-1 Ab (Western blot)
+Other2,HIV-1 Western Blot,HIV,HIV-1 Ab (Western blot)
+Other2,Multispot HIV1/2,HIV,HIV-1/2 Ab (Multispot)
+Other2,Ultrio-Elite HIV 1/2/HCV/HBV,HIV,HIV-1/HCV/HBV NAT
+Other5,HIV-1 Western Blot,HIV,HIV-1 Ab (Western blot)
+Other1,HTLV,HTLV,HTLV
+Other1,HTLV I/II Ab,HTLV,HTLV-1/2 Ab
+Other1,HTLV I/II Immunoblot Confirmatory,HTLV,HTLV-1/2 Ab
+Other1,Rubella IgG,Rubella,Rubella IgG Ab
+Other1,COVID,SARS-CoV-2,SARS-CoV-2
+Other1,Covid,SARS-CoV-2,SARS-CoV-2
+Other1,COVID-19/SARS-CoV-2,SARS-CoV-2,SARS-CoV-2
+Other1,SARS Co-V-2,SARS-CoV-2,SARS-CoV-2
+Other1,SARS-COV-2,SARS-CoV-2,SARS-CoV-2
+Other1,BioGx SARS Co-V-2,SARS-CoV-2,SARS-CoV-2 RT-PCR
+Other1,Coronavirus SARS-CoV-2 RT-PCR,SARS-CoV-2,SARS-CoV-2 RT-PCR
+Other1,SARS-CoV-2 Panther,SARS-CoV-2,SARS-CoV-2 RT-PCR
+Other1,SARS-CoV-2 RT PCR,SARS-CoV-2,SARS-CoV-2 RT-PCR
+Other1,SARS-CoV-2 RT-PCR,SARS-CoV-2,SARS-CoV-2 RT-PCR
+Other1,Strongloides Ab,Strongyloides,Strongyloides Ab
+Other1,Strongy Ab,Strongyloides,Strongyloides Ab
+Other1,Strongyloides (Ab),Strongyloides,Strongyloides Ab
+Other1,Strongyloides AB,Strongyloides,Strongyloides Ab
+Other1,Strongyloides Ab,Strongyloides,Strongyloides Ab
+Other1,Strongyloides ab,Strongyloides,Strongyloides Ab
+Other1,strongyloides AB,Strongyloides,Strongyloides Ab
+Other1,strongyloides Ab,Strongyloides,Strongyloides Ab
+Other1,strongyloides ab,Strongyloides,Strongyloides Ab
+Other1,Stronyloides Ab,Strongyloides,Strongyloides Ab
+Other1,CDC Strongyloide,Strongyloides,Strongyloides IgG Ab
+Other1,CDC Strongyloide Retest,Strongyloides,Strongyloides IgG Ab
+Other1,CDC Strongyloide Retesting,Strongyloides,Strongyloides IgG Ab
+Other1,Strongyl IgG,Strongyloides,Strongyloides IgG Ab
+Other1,Strongyloides Ab (IgG),Strongyloides,Strongyloides IgG Ab
+Other1,Strongyloides Ab IgG,Strongyloides,Strongyloides IgG Ab
+Other1,Strongyloides AB(IgG),Strongyloides,Strongyloides IgG Ab
+Other1,Strongyloides IgG,Strongyloides,Strongyloides IgG Ab
+Other1,strongyloides igg,Strongyloides,Strongyloides IgG Ab
+Other1,srongyloides,Strongyloides,Strongyloides
+Other1,Stongyloides,Strongyloides,Strongyloides
+Other1,Strongloides,Strongyloides,Strongyloides
+Other1,strongloides,Strongyloides,Strongyloides
+Other1,Stronglyloides,Strongyloides,Strongyloides
+Other1,stronglyloides,Strongyloides,Strongyloides
+Other1,Stronglyoides,Strongyloides,Strongyloides
+Other1,Strongoloides,Strongyloides,Strongyloides
+Other1,Strongolydes,Strongyloides,Strongyloides
+Other1,Strongolyoides,Strongyloides,Strongyloides
+Other1,Strongy,Strongyloides,Strongyloides
+Other1,strongy,Strongyloides,Strongyloides
+Other1,strongyl,Strongyloides,Strongyloides
+Other1,Strongylodes,Strongyloides,Strongyloides
+Other1,Strongylodies,Strongyloides,Strongyloides
+Other1,STRONGYLOIDES,Strongyloides,Strongyloides
+Other1,Strongyloides,Strongyloides,Strongyloides
+Other1,sTRONGYLOIDES,Strongyloides,Strongyloides
+Other1,strongyloides,Strongyloides,Strongyloides
+Other1,Strongyloids,Strongyloides,Strongyloides
+Other1,strongyloids,Strongyloides,Strongyloides
+Other1,Stronygloides,Strongyloides,Strongyloides
+Other1,Stronyloides,Strongyloides,Strongyloides
+Other2,Strongy Ab,Strongyloides,Strongyloides Ab
+Other2,Strongyloides Ab,Strongyloides,Strongyloides Ab
+Other2,strongyloides ab,Strongyloides,Strongyloides Ab
+Other2,Strongyloides Ab (IgG),Strongyloides,Strongyloides IgG Ab
+Other2,Strongyloides AB IgG,Strongyloides,Strongyloides IgG Ab
+Other2,Strongyloides Ab IgG,Strongyloides,Strongyloides IgG Ab
+Other2,strongyloides Ab IgG,Strongyloides,Strongyloides IgG Ab
+Other2,Strongyloides IgG,Strongyloides,Strongyloides IgG Ab
+Other2,strongyloides IGg,Strongyloides,Strongyloides IgG Ab
+Other2,Strong,Strongyloides,Strongyloides
+Other2,Strongy,Strongyloides,Strongyloides
+Other2,strongy,Strongyloides,Strongyloides
+Other2,Strongy.,Strongyloides,Strongyloides
+Other2,STRONGYLOIDES,Strongyloides,Strongyloides
+Other2,Strongyloides,Strongyloides,Strongyloides
+Other2,strongyloides,Strongyloides,Strongyloides
+Other2,Strongylokies,Strongyloides,Strongyloides
+Other3,Strongy Ab,Strongyloides,Strongyloides Ab
+Other3,strongy Ab,Strongyloides,Strongyloides Ab
+Other3,Strongyloides Ab,Strongyloides,Strongyloides Ab
+Other3,Strongy,Strongyloides,Strongyloides
+Other3,strongy,Strongyloides,Strongyloides
+Other3,Strongyloides,Strongyloides,Strongyloides
+Other3,strongyloides,Strongyloides,Strongyloides
+Other3,Strongyloids,Strongyloides,Strongyloides
+Other4,Strongy Ab,Strongyloides,Strongyloides Ab
+Other4,Strongyloides,Strongyloides,Strongyloides
+Other5,Strongyloides Ab,Strongyloides,Strongyloides Ab
+Other5,Strongy,Strongyloides,Strongyloides
+Other5,Strongyloides,Strongyloides,Strongyloides
+Other1,PRP Titer,Syphilis,RPR
+Other1,RPR,Syphilis,RPR
+Other1,RPR (Non-treponemal syphilis),Syphilis,RPR
+Other1,RPR Titer,Syphilis,RPR
+Other1,Syphilis,Syphilis,Syphilis
+Other1,Confirmatory Syphilis,Syphilis,Syphilis - Confirmatory
+Other1,Confirmatory syphilis,Syphilis,Syphilis - Confirmatory
+Other1,confirmatory syphilis,Syphilis,Syphilis - Confirmatory
+Other1,syphilis confirmatory,Syphilis,Syphilis - Confirmatory
+Other1,TPHA,Syphilis,"Syphilis (Treponemal Ab, TPHA)"
+Other1,T. Pallidum Ab,Syphilis,Syphilis (Treponemal Ab)
+Other1,Treponemal Syphilis,Syphilis,Syphilis (Treponemal Ab)
+Other1,CAPITA (Treponemal Syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Capita G Screen,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,capita syphillis,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Capita-G Confirmatory,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Capita-G Screen,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Capital-G Confirmatory,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Capta,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,CAPTIA,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,CAptia,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia - G screen,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia -G screen,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia ( treponemal syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,CAPTIA (Treponemal Syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,CAPTIA (treponemal syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia (Treponemal Syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia confirmatory,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia Syphilis,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia syphilis,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia Syphillis,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia-G,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,CAPTIA-G CONFIRMATORY,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia-G Confirmatory,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia-G confirmatoy    -,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia-G Screen,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia-IgG EIA,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia( Treponemal Syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia( treponemal syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Captia(treponemal syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,FTA-ABS,Syphilis,Syphilis (Treponemal IgG Ab)
+Other2,RPR - Titer,Syphilis,RPR
+Other2,T. Pallidum confirm,Syphilis,Syphilis (Treponemal Ab)
+Other2,CAPIA (Treponemal Syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other2,CAPITA (treponemal Syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other2,Captia,Syphilis,Syphilis (Treponemal IgG Ab)
+Other2,CAPTIA (Treponemal Syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other2,Captia (treponemal syphilis),Syphilis,Syphilis (Treponemal IgG Ab)
+Other2,CAPTIA Traponemal Syphilis,Syphilis,Syphilis (Treponemal IgG Ab)
+Other2,Captia-G Confirmatory,Syphilis,Syphilis (Treponemal IgG Ab)
+Other2,FTA-ABS,Syphilis,Syphilis (Treponemal IgG Ab)
+Other3,T Pallidium Ab,Syphilis,Syphilis (Treponemal Ab)
+Other3,CAPTIA,Syphilis,Syphilis (Treponemal IgG Ab)
+Other3,Captia-G,Syphilis,Syphilis (Treponemal IgG Ab)
+Other3,CAPTIA-G Confirmatory,Syphilis,Syphilis (Treponemal IgG Ab)
+Other3,Captia-G Confirmatory,Syphilis,Syphilis (Treponemal IgG Ab)
+Other4,Captia-G,Syphilis,Syphilis (Treponemal IgG Ab)
+Other5,Captia-G Confirmatory,Syphilis,Syphilis (Treponemal IgG Ab)
+Other1,Toxoplasma,Toxoplasma,Toxoplasma
+Other1,Tox Ab IgG,Toxoplasma,Toxoplasma IgG Ab
+Other1,Toxo Ab IgG,Toxoplasma,Toxoplasma IgG Ab
+Other1,toxo IgC,Toxoplasma,Toxoplasma IgG Ab
+Other1,TOXO IgG,Toxoplasma,Toxoplasma IgG Ab
+Other1,Toxo IgG,Toxoplasma,Toxoplasma IgG Ab
+Other1,Toxoplasm IgG,Toxoplasma,Toxoplasma IgG Ab
+Other1,Toxoplasma IgG,Toxoplasma,Toxoplasma IgG Ab
+Other1,Toxoplasma igG,Toxoplasma,Toxoplasma IgG Ab
+Other1,Toxoplasma IgG (EIA),Toxoplasma,Toxoplasma IgG Ab
+Other1,toxo IGM/IGG,Toxoplasma,Toxoplasma IgG/IgM Ab
+Other1,tox IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo  Ab IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo AB IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo AB Igm,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo Ab IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo ab IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,toxo Ab IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo IGM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo Igm,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo igM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo igm,Toxoplasma,Toxoplasma IgM Ab
+Other1,toxo IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,toxo Igm,Toxoplasma,Toxoplasma IgM Ab
+Other1,toxo igM,Toxoplasma,Toxoplasma IgM Ab
+Other1,toxo igm,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo IgM AB,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo IgM Ab,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxo ImG,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxoplasma IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxoplasma IgM Ab,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxoplasmosis IGM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Toxoplasmosis IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,toxoplasmosis IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,toxo igm/EBNA IgM,Toxoplasma,Toxoplasma IgM Ab/ EBNA IgM Ab
+Other1,Toxoplasmosis PCR,Toxoplasma,Toxoplasma PCR
+Other2,Toxo Ab IgG,Toxoplasma,Toxoplasma IgG Ab
+Other2,Toxo IgG,Toxoplasma,Toxoplasma IgG Ab
+Other2,Toxoplasma IgG,Toxoplasma,Toxoplasma IgG Ab
+Other2,Toxo Ab IgM,Toxoplasma,Toxoplasma IgM Ab
+Other2,Toxo IgM,Toxoplasma,Toxoplasma IgM Ab
+Other2,toxo IgM,Toxoplasma,Toxoplasma IgM Ab
+Other2,toxo igM,Toxoplasma,Toxoplasma IgM Ab
+Other2,toxo igm,Toxoplasma,Toxoplasma IgM Ab
+Other2,Toxoplasma IgM,Toxoplasma,Toxoplasma IgM Ab
+Other2,Toxoplasmosis IGM,Toxoplasma,Toxoplasma IgM Ab
+Other3,Toxoplasma IgM,Toxoplasma,Toxoplasma IgM Ab
+Other1,Quantiferon,Tuberculosis,TB Quantiferon
+Other1,TB Quantiferon,Tuberculosis,TB Quantiferon
+Other3,Quant TB,Tuberculosis,TB Quantiferon
+Other1,GADA,Type 1 Diabetes,GADA
+Other1,nPOD - GADA,Type 1 Diabetes,GADA
+Other1,nPod - GADA,Type 1 Diabetes,GADA
+Other1,nPOD GADA,Type 1 Diabetes,GADA
+Other1,nPOD-GADA,Type 1 Diabetes,GADA
+Other1,nPOD/GADA,Type 1 Diabetes,GADA
+Other1,nPOD IA2,Type 1 Diabetes,IA-2
+Other1,N-POD,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other1,NPOD,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other1,Npod,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other1,nPOD,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other1,nPod,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other2,GADA,Type 1 Diabetes,GADA
+Other2,nPOD GADA,Type 1 Diabetes,GADA
+Other2,IA-2,Type 1 Diabetes,IA-2
+Other2,IA2,Type 1 Diabetes,IA-2
+Other2,nPOD - IA2,Type 1 Diabetes,IA-2
+Other2,nPod - IA2,Type 1 Diabetes,IA-2
+Other2,nPOD IA2,Type 1 Diabetes,IA-2
+Other2,nPOD-IA2,Type 1 Diabetes,IA-2
+Other2,nPOD/IA2,Type 1 Diabetes,IA-2
+Other2,nPOD,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other3,GADA,Type 1 Diabetes,GADA
+Other3,NPOD - GADA,Type 1 Diabetes,GADA
+Other3,NPOD GADA,Type 1 Diabetes,GADA
+Other3,nPOD GADA,Type 1 Diabetes,GADA
+Other3,IA2,Type 1 Diabetes,IA-2
+Other3,NPOD,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other3,nPOD,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other4,GADA,Type 1 Diabetes,GADA
+Other4,nPOD GADA,Type 1 Diabetes,GADA
+Other4,IA2,Type 1 Diabetes,IA-2
+Other4,Ia2,Type 1 Diabetes,IA-2
+Other4,NPOD - IA2,Type 1 Diabetes,IA-2
+Other4,nPOD IA-2,Type 1 Diabetes,IA-2
+Other4,NPOD IA2,Type 1 Diabetes,IA-2
+Other4,nPOD IA2,Type 1 Diabetes,IA-2
+Other5,IA2,Type 1 Diabetes,IA-2
+Other5,nPOD IA2,Type 1 Diabetes,IA-2
+Other5,NPOD,Type 1 Diabetes,pancreatic autoantibody (nPOD)
+Other1,WNV,WNV,WNV
+Other1,WNV IgM,WNV,WNV IgM Ab
+Other1,NAT WNV,WNV,WNV NAT (RNA)
+Other1,West Nile NAT,WNV,WNV NAT (RNA)
+Other1,WNV NAT,WNV,WNV NAT (RNA)
+Other2,WNV,WNV,WNV
+Other2,WNV IgM,WNV,WNV IgM Ab
+Other2,WNV NAT,WNV,WNV NAT (RNA)
+Other2,WNV plaque reduc,WNV,WNV PRNT
+Other3,WNV NAT,WNV,WNV NAT (RNA)
+Other1,Zika,Zika,Zika
+Other1,Zika IgG / IgM,Zika,Zika IgG/IgM Ab
+Other2,Zika,Zika,Zika
+Other2,NAT Zika RNA,Zika,Zika RNA
