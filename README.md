@@ -17,6 +17,10 @@ The `plots_NSD.R` file can be used to generate simple plots and tables that summ
 
 ## Mappings
 
-The ORCHID events tables captures data as it was recorded in the underlying OPO database, with minimal modifications. However, for research and analysis, it may be helpful to map and combine certain data fields. For example, identical serological tests are often referred to using different names (e.g., Anti HBc vs. Anti-HBc). In the `mappings` folder of this repository, we intend to provide a set of dictionaries that facilitate more meaningful data analysis of these fields. So far, we have added:
+The ORCHID events tables capture data as it was recorded in the underlying OPO database, with minimal modifications. However, for research and analysis, it may be helpful to map and combine certain data fields. For example, identical serological tests are often referred to using different names (e.g., Anti HBc vs. Anti-HBc). In the `mappings` folder of this repository, we intend to provide a set of dictionaries that facilitate more meaningful data analysis of these fields. So far, we have added:
 
-* serology_name_map: This file maps the raw serology names captured in the OPO data (`serology_name`) to de-deduplicated names (`serology_name_deduplicated`) that combine identical tests into unique categories.
+* serology_map: This file maps the raw serology names captured in the OPO data to classes of tests and deduplicated test names. This map contains the following fields:
+  - `serology_name`: Name of serological test in the ORCHID data
+  - `serology_name_Other`: If serology_name is "Other", a free-text description of the test
+  - `serology_class`: This mapped column indicates the organism / antibody that the test aimed to detect (e.g., HBV, HIV, etc.)
+  - `serology_standardized_name`: This mapped column indicates the organism and specific test conducted (e.g., IgG, IgM, NAT). Unlike the raw `serology_name`, this column de-duplicates and combines identical tests (e.g., HbsAg, HBsAg, and HbsAg#)
